@@ -1,5 +1,3 @@
-from http import HTTPStatus
-
 from chalicelib.handlers.produce_handler import ProduceHandler
 
 from chalice import Chalice, Response
@@ -11,21 +9,26 @@ app = Chalice(app_name='ducetrak')
 def index():
     return {'ping': 'pong'}
 
+
 @app.route('/produce')
 def produce() -> Response:
     return ProduceHandler().get_produce()
+
 
 @app.route('/type')
 def produce_type():
     return {'produce': 'type'}
 
+
 @app.route('/price')
 def price():
     return {'produce': 'price'}
 
+
 @app.route('/user')
 def user():
     return {'user': 'user'}
+
 
 @app.route('/location')
 def location():

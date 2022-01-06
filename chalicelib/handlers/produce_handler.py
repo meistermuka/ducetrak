@@ -2,6 +2,7 @@ from http import HTTPStatus
 
 from chalice import Response
 
+
 class ProduceHandler:
 
     def get_produce(self) -> Response:
