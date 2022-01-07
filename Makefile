@@ -11,3 +11,6 @@ lint:
 
 test:
 	pytest tests/
+
+deploy: init
+	chalice deploy --stage $(STAGE)
