@@ -5,7 +5,7 @@
     "dev": {
       "api_gateway_stage": "dev"
     },
-    "staging": {
+    "stg": {
       "api_gateway_stage": "stg"
     },
     "prod": {
