@@ -9,8 +9,6 @@ jobs:
     build:
 
         runs-on: ubuntu-latest
-        env:
-            STAGE: dev
         steps:
             - name: Checkout
             - uses: actions/checkout@v2
@@ -23,5 +21,6 @@ jobs:
                 aws-region: ${{ secrets.AWS_REGION }}
             
             - name: Deploy to DEV
-              run:
-                make deploy
+              env:
+               STAGE: dev
+              run: make deploy
