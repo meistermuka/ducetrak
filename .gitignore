@@ -1,3 +1,6 @@
+.chalice/deployments/
+.chalice/venv/
+
 venv/
 
 *.pyc
